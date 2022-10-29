@@ -1,6 +1,6 @@
 import React from 'react'
 import InputBox from './Common/InputBox'
-
+import {Link} from 'react-router-dom';
 const Login = () => {
   return (
     <div className='loginWraper'>
@@ -10,7 +10,7 @@ const Login = () => {
     
     <InputBox name="email" placeText={"Email..."} />
     <InputBox name="password" placeText={"password..."} />
-    <h4>Already have an accound login </h4>
+    <h4>Don't have an account <Link to="/signup">signup</Link> </h4>
     <button>Login</button>
 
         </div>

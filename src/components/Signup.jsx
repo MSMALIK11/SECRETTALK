@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import InputBox from './Common/InputBox'
 
 const Signup = () => {
@@ -11,6 +12,7 @@ const Signup = () => {
 
 <InputBox name="email" placeText={"Email..."} />
 <InputBox name="password" placeText={"password..."} />
+<h4>Already have an account <Link to="/login">login</Link> </h4>
 <button>Sign up</button>
 
     </div>

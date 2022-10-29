@@ -2,7 +2,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: #000000;
+  background-color: #eee;
   color: #fff;
 }
 h1,
@@ -39,7 +39,7 @@ h6 {
 
 .inputBox {
   border: none;
-  color: #fff;
+  color: #111;
   padding: 7px 10px;
 
   width: 100%;
@@ -48,13 +48,13 @@ h6 {
   outline: none;
   border-radius: 5=2px;
   background-color: transparent;
-  border-bottom: 2px solid indigo;
-  border-right: 2px solid transparent;
+  /* border-bottom: 2px solid indigo;
+  border-right: 2px solid transparent; */
 }
 
-.inputBox:focus {
+/* .inputBox:focus {
   border-right: 2px solid indigo;
-}
+} */
 ::placeholder {
   color: #817b7b;
   font-weight: bold;
@@ -72,5 +72,204 @@ h6 {
   transition: 0.2s;
 }
 .login button:active {
+  transform: scale(0.9);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  height: 80vh;
+}
+
+.home-wraper {
+  background-color: #444;
+  width: 80%;
+  height: 90vh;
+  display: flex;
+}
+
+.home-chat-left {
+  width: 30%;
+  /* background-color: rgb(0, 6, 61); */
+  background-color: #3e3c61;
+}
+.home-chatting-right {
+  background-color: rgb(185, 197, 185);
+  width: 100%;
+  overflow: hidden;
+  background: url(./components/Images/chatbg.jpg) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.home-chatting-right::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+}
+
+.chat-header {
+  height: 50px;
+  /* background-color: rgb(3, 7, 44); */
+  background-color: #2f2d53;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+.header-chat-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.chat-header-profile {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #fff;
+}
+.chat-author-name {
+  font-size: 12px;
+  display: block;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.chat-header-logout-btn {
+  background-color: rgba(11, 29, 192, 0.877);
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.connections-wraper {
+  height: 70vh;
+
+  overflow: auto;
+}
+
+.connection-box {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  gap: 20px;
+
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.connection-box:hover {
+  background-color: rgb(3, 13, 97);
+}
+
+.connection-box img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.connection-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.connection-name {
+  text-transform: capitalize;
+  line-height: 25px;
+}
+.connection-last-message {
+  color: #8f8888;
+}
+.messsage-container {
+  height: 100%;
+  position: relative;
+}
+.message-header-container {
+  background-color: rgb(3, 7, 44);
+  width: 100%;
+
+  height: 45px;
+
+  padding: 0 10px;
+}
+
+.message-header {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+}
+
+.message-sender {
+  display: flex;
+  align-items: center;
+
+  margin: 10px;
+  height: 70px;
+}
+
+.message {
+  background-color: #fff;
+  color: #111;
+  padding: 5px 10px;
+  border-radius: 0 15px 0 15px;
+  max-width: 400px;
+  word-spacing: ;
+  height: auto;
+  overflow: hidden;
+}
+
+.message-sender.owner {
+  flex-direction: row-reverse;
+}
+
+.send-message-wraper {
+  position: absolute;
+  width: 100%;
+  bottom: 10%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  height: 60px;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.send-message-input {
+  width: 80%;
+}
+
+.send-actions button {
+  background-color: aqua;
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-right: 10px;
+  transition: 0.4s;
+  color: indigo;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+
+.send-actions button:active {
   transform: scale(0.9);
 }
